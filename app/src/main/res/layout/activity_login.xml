@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login_screens.Login">
+    
+    <ImageView
+        android:id="@+id/logo_top"
+        android:layout_width="wrap_content"
+        android:layout_height="130dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/logo_strath_lingo"/>
+
+    <EditText
+        android:id="@+id/et_login_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_borderbox"
+        android:layout_margin="20dp"
+        android:hint="@string/hint_email"
+        android:inputType="textEmailAddress"
+        android:imeOptions="actionNext"
+        android:padding="10dp"
+        android:layout_below="@id/logo_top"
+        android:drawableLeft="@drawable/ic_login_email"
+        android:drawablePadding="5dp"/>
+
+    <EditText
+        android:id="@+id/et_login_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_borderbox"
+        android:layout_margin="20dp"
+        android:hint="@string/hint_password"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:imeOptions="actionDone"
+        android:layout_below="@id/et_login_email"
+        android:drawableLeft="@drawable/ic_login_password"
+        android:drawablePadding="5dp" />
+
+    <Button
+        android:id="@+id/bt_login_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_login_password"
+        android:layout_centerHorizontal="true"
+        android:text="@string/submit"
+        android:onClick="onClickSubmit" />
+
+    <TextView
+        android:id="@+id/tv_login_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bt_login_submit"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:textSize="20sp"
+        android:onClick="onClickRegister"
+        android:text="@string/register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_login_forgot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_login_register"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:textSize="20sp"
+        android:text="@string/forgot_password"
+        android:onClick="onClickForgotPassword" />
+
+    <ImageView
+        android:id="@+id/logo_bottom"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/logo_strath_uni"
+        android:layout_margin="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

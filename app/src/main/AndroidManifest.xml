@@ -10,7 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Cs991_group_project">
         <activity
-            android:name=".MainActivity"
+            android:name=".login_screens.ForgotPassword"
+            android:exported="false" />
+        <activity
+            android:name=".login_screens.RegisterUser"
+            android:exported="false" />
+        <activity
+            android:name=".admin_screens.AdminHome"
+            android:exported="false" />
+        <activity
+            android:name=".user_screens.UserHome"
+            android:exported="false" />
+        <activity
+            android:name=".login_screens.Login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
