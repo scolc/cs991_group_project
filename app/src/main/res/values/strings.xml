@@ -23,4 +23,17 @@
     <string name="forgotpw_back_to_login">Back to Login Screen</string>
     <string name="app_title_desc">Strath Lingo App Title</string>
     <string name="app_uni_logo_desc">University of Strathclyde Logo</string>
+    <string name="your_languages">Your Languages</string>
+    <string name="top_menu">MENU</string>
+    <string name="add_language">Add A Language</string>
+    <string name="bt_continue">Continue</string>
+    <string name="top_back">BACK</string>
+    <string name="top_home">HOME</string>
+    <string name="select_lessons">Select A Lesson</string>
+    <string name="bt_start">Start</string>
+    <string name="what_word">What Is The Correct Word?</string>
+    <string name="option_a">Option A</string>
+    <string name="option_b">Option B</string>
+    <string name="option_c">Option C</string>
+    <string name="option_d">Option D</string>
 </resources>
