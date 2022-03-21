@@ -13,6 +13,9 @@
             android:name=".login_screens.ForgotPassword"
             android:exported="false" />
         <activity
+            android:name=".login_screens.ForgotPasswordLinkSent"
+            android:exported="false" />
+        <activity
             android:name=".login_screens.RegisterUser"
             android:exported="false" />
         <activity

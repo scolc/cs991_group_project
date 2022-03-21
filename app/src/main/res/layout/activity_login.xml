@@ -73,10 +73,13 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_login_register"
         android:layout_centerHorizontal="true"
-        android:layout_margin="10dp"
-        android:textSize="20sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:onClick="onClickForgotPassword"
         android:text="@string/forgot_password"
-        android:onClick="onClickForgotPassword" />
+        android:textSize="20sp" />
 
     <ImageView
         android:id="@+id/logo_bottom"
