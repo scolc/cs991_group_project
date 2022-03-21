@@ -1,7 +1,9 @@
 package com.cs991_group_project.user_screens;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
@@ -40,5 +42,13 @@ public class UserHome extends AppCompatActivity {
 
             jh.saveUserDataFile(userDataFile, currentUser);
         }
+    }
+
+    public void onClickContinue(View view) {
+        Intent intent = new Intent(this, Lessons.class);
+        startActivity(intent);
+    }
+
+    public void onClickMenu(View view) {
     }
 }

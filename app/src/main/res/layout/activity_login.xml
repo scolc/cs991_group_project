@@ -51,8 +51,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/et_login_password"
         android:layout_centerHorizontal="true"
-        android:text="@string/submit"
-        android:onClick="onClickSubmit" />
+        android:onClick="onClickSubmit"
+        android:text="@string/submit" />
 
     <TextView
         android:id="@+id/tv_login_register"
