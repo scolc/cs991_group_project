@@ -11,11 +11,11 @@
         android:id="@+id/logo_top"
         android:layout_width="wrap_content"
         android:layout_height="130dp"
-        android:layout_marginTop="50dp"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="20dp"
-        android:src="@drawable/logo_strath_lingo"/>
+        android:src="@drawable/logo_strath_lingo" />
 
     <TextView
         android:id="@+id/tv_register_message"
@@ -93,24 +93,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/et_register_confirm_password"
-        android:gravity="center"
-        android:layout_marginTop="20dp" >
+        android:layout_marginTop="20dp"
+        android:gravity="center">
 
         <Button
             android:id="@+id/bt_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="10dp"
-            android:text="@string/back"
-            android:onClick="onClickBack" />
+            android:onClick="onClickBack"
+            android:text="@string/back" />
 
         <Button
             android:id="@+id/bt_submit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:text="@string/submit"
-            android:onClick="onClickSubmit" />
+            android:onClick="onClickSubmit"
+            android:text="@string/submit" />
 
     </LinearLayout>
 
