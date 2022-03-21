@@ -15,6 +15,14 @@
     <string name="password_mismatch">Passwords Must Match</string>
     <string name="UserAlreadyExists">An Account For This Email\nIs Already Registered</string>
     <string name="new_user_created">New User Created</string>
+    <string name="forgotpw_enter_email">Please enter your email address\nto recover your password.</string>
+    <string name="forgotpw_missing_email">Please enter your email.</string>
+    <string name="forgotpw_incorrect_format">Please insert a valid email address.</string>
+    <string name="forgotpw_email_not_found">Email not found!</string>
+    <string name="forgotpw_link_sent">A link to recover your password\nhas been emailed to you.</string>
+    <string name="forgotpw_back_to_login">Back to Login Screen</string>
+    <string name="app_title_desc">Strath Lingo App Title</string>
+    <string name="app_uni_logo_desc">University of Strathclyde Logo</string>
     <string name="your_languages">Your Languages</string>
     <string name="top_menu">MENU</string>
     <string name="add_language">Add A Language</string>
