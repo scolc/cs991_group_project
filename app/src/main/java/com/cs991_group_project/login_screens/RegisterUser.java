@@ -1,21 +1,22 @@
 package com.cs991_group_project.login_screens;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.cs991_group_project.R;
+import com.cs991_group_project.objects.CurrentUser;
+import com.cs991_group_project.objects.JSONHandler;
 import com.cs991_group_project.objects.StoredUserList;
 import com.cs991_group_project.objects.User;
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.util.Calendar;
 
 public class RegisterUser extends AppCompatActivity {
 
@@ -23,6 +24,8 @@ public class RegisterUser extends AppCompatActivity {
     private EditText etRegisterEmail;
     private EditText etRegisterPassword;
     private EditText etRegisterConfirmPassword;
+    private File usersFile;
+    private JSONHandler jh;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +36,9 @@ public class RegisterUser extends AppCompatActivity {
         etRegisterEmail = findViewById(R.id.et_register_email);
         etRegisterPassword = findViewById(R.id.et_register_password);
         etRegisterConfirmPassword = findViewById(R.id.et_register_confirm_password);
+
+        usersFile = new File(getFilesDir(), "users.json");
+        jh = new JSONHandler();
     }
 
     /**
@@ -48,6 +54,7 @@ public class RegisterUser extends AppCompatActivity {
      * The activity when the user clicks on the sign up button
      * @param view The view
      */
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public void onClickSubmit(View view) {
 
         String regNameText = etRegisterName.getText().toString();
@@ -55,7 +62,7 @@ public class RegisterUser extends AppCompatActivity {
         String regPasswordText = etRegisterPassword.getText().toString();
         String regPasswordConfirmText = etRegisterConfirmPassword.getText().toString();
 
-        StoredUserList storedUsers = getStoredUsers();
+        StoredUserList storedUsers = jh.loadUsersFile(usersFile);
 
         if (regNameText.isEmpty() || regEmailText.isEmpty() || regPasswordText.isEmpty() || regPasswordConfirmText.isEmpty()) {
             Toast.makeText(this, R.string.missing_details, Toast.LENGTH_SHORT).show();
@@ -66,48 +73,18 @@ public class RegisterUser extends AppCompatActivity {
                 Toast.makeText(this, R.string.UserAlreadyExists, Toast.LENGTH_SHORT).show();
             } else {
                 User newUser = new User(regEmailText, regPasswordText, regNameText, "user");
-                storedUsers.addNewUser(newUser);
-                saveStoredUsers(storedUsers);
+                storedUsers.addUser(newUser);
+                jh.saveUsersFile(usersFile, storedUsers);
+
+                CurrentUser currentUser = new CurrentUser();
+                currentUser.setEmail(newUser.getEmail());
+                currentUser.setUName(newUser.getUName());
+                currentUser.setJoinDateFromDate(Calendar.getInstance());
+                File userDataFile = new File(getFilesDir(), newUser.getEmail() + "_data.json");
+                jh.saveUserDataFile(userDataFile, currentUser);
+
                 finish();
             }
         }
-    }
-
-    /**
-     * Fetches the text file with store users from storage and loads it into a UserList object
-     * @return The filled UserList object
-     */
-    public StoredUserList getStoredUsers() {
-
-        FileInputStream fis = null;
-        InputStream is = null;
-        StoredUserList storedUsers = new StoredUserList();
-
-        try {
-            fis = openFileInput("users.txt");
-            storedUsers.openStoredUsersList(fis);
-            fis.close();
-        } catch (IOException e) {
-            // File not found in local storage so use the default one in assets
-            try {
-                is = getAssets().open("users.txt");
-                storedUsers.openStoredUsersList(is);
-                is.close();
-            } catch (IOException ioException) {
-                ioException.printStackTrace();
-            }
-        }
-        return storedUsers;
-    }
-
-    /**
-     * Stores the user list in a text file in local storage
-     * @param storedUsers The filled UserList object
-     */
-    public void saveStoredUsers(StoredUserList storedUsers){
-
-        File file = new File(getFilesDir(), "users.txt");
-        storedUsers.saveStoredUsersList(file);
-        Toast.makeText(this, R.string.new_user_created, Toast.LENGTH_LONG).show();
     }
 }
