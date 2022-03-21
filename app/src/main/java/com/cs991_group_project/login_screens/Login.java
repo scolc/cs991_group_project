@@ -1,30 +1,39 @@
 package com.cs991_group_project.login_screens;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Path;
+import android.os.Build;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.cs991_group_project.R;
 import com.cs991_group_project.admin_screens.AdminHome;
+import com.cs991_group_project.objects.JSONHandler;
 import com.cs991_group_project.objects.StoredUserList;
 import com.cs991_group_project.objects.User;
 import com.cs991_group_project.user_screens.UserHome;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 public class Login extends AppCompatActivity {
 
     private EditText etLoginEmail;
     private EditText etLoginPassword;
+    private File usersFile;
+    private JSONHandler jh;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +42,12 @@ public class Login extends AppCompatActivity {
 
         etLoginEmail = findViewById(R.id.et_login_email);
         etLoginPassword = findViewById(R.id.et_login_password);
+        jh = new JSONHandler();
+
+        usersFile = new File(getFilesDir(), "users.json");
+        if (!usersFile.exists()) {
+            setupUsersFile();
+        }
     }
 
     /**
@@ -57,9 +72,10 @@ public class Login extends AppCompatActivity {
      * The activity when the user clicks on the Submit Button
      * @param view The view
      */
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public void onClickSubmit(View view) {
 
-        StoredUserList storedUsers = getStoredUsers();
+        StoredUserList storedUsers = jh.loadUsersFile(usersFile);
 
         String loginEmailText = etLoginEmail.getText().toString();
         String loginPasswordText = etLoginPassword.getText().toString();
@@ -70,8 +86,8 @@ public class Login extends AppCompatActivity {
             Toast.makeText(this, R.string.login_success, Toast.LENGTH_SHORT).show();
 
             // Save a file with current user details so all activities can access without having to pass with intents
-            File file = new File(getFilesDir(), "current_user.txt");
-            currentUser.saveCurrentUserToFile(file);
+            File file = new File(getFilesDir(), "current_user.json");
+            jh.saveCurrentUserToFile(file, currentUser);
 
             if (currentUser.getAccessLevel().equals("user")) {
                 Intent intent = new Intent(this, UserHome.class);
@@ -86,29 +102,18 @@ public class Login extends AppCompatActivity {
     }
 
     /**
-     * Fetches the text file with store users from storage and loads it into a UserList object
-     * @return The filled UserList object
+     * Creates a default users file from assets folder
      */
-    public StoredUserList getStoredUsers() {
-
-        FileInputStream fis = null;
+    public void setupUsersFile(){
         InputStream is = null;
-        StoredUserList storedUsers = new StoredUserList();
-
         try {
-            fis = openFileInput("users.txt");
-            storedUsers.openStoredUsersList(fis);
-            fis.close();
+            is = getAssets().open("users.json");
+            BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+            String line = reader.readLine();
+            jh.setupUsersFile(usersFile, line);
+
         } catch (IOException e) {
-            // File not found in local storage so use the default one in assets
-            try {
-                is = getAssets().open("users.txt");
-                storedUsers.openStoredUsersList(is);
-                is.close();
-            } catch (IOException ioException) {
-                ioException.printStackTrace();
-            }
+            e.printStackTrace();
         }
-        return storedUsers;
     }
 }

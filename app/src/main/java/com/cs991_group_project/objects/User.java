@@ -21,8 +21,8 @@ public class User {
         this.accessLevel = accessLevel;
     }
 
-    public User(File file){
-        getCurrentUserFromFile(file);
+    public User() {
+
     }
 
     // Getters and Setters

@@ -1,2 +1,0 @@
-admin/pass/adminname/admin
-user/pass/username/user
