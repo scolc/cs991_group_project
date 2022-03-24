@@ -9,7 +9,7 @@ public class Lesson {
     private ArrayList<Question> questions;
 
     public Lesson() {
-
+        this.questions = new ArrayList<>();
     }
 
     // Getters and Setters
@@ -48,5 +48,10 @@ public class Lesson {
 
     public void addQuestion(Question question){
         this.questions.add(question);
+    }
+
+    @Override
+    public String toString() {
+        return "Lesson " + lessonNum;
     }
 }

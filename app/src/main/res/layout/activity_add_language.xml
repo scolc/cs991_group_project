@@ -5,8 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".user_screens.UserHome">
-
+    tools:context=".user_screens.AddLanguage">
 
     <ImageView
         android:id="@+id/logo_top"
@@ -17,6 +16,28 @@
         android:layout_marginRight="20dp"
         android:layout_marginBottom="20dp"
         android:src="@drawable/logo_strath_lingo"/>
+
+    <TextView
+        android:id="@+id/top_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/top_back"
+        android:textStyle="bold"
+        android:onClick="onClickBack"/>
+
+    <TextView
+        android:id="@+id/top_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/top_home"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:onClick="onClickHome"/>
 
     <TextView
         android:id="@+id/top_menu"
@@ -38,7 +59,7 @@
         android:layout_below="@id/logo_top"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="10dp"
-        android:text="@string/your_languages"
+        android:text="@string/select_language"
         android:textStyle="bold" />
 
     <ListView
@@ -58,23 +79,14 @@
 
     <Button
         android:id="@+id/bt_add_language"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/bt_continue"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:text="@string/add_language"
-        android:onClick="onClickAddLanguage"/>
-
-    <Button
-        android:id="@+id/bt_continue"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:layout_above="@id/logo_bottom"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:onClick="onClickContinue"
-        android:text="@string/bt_continue"
+        android:text="@string/bt_add_language"
+        android:onClick="onClickAddLanguage"
         android:enabled="false"/>
 
 

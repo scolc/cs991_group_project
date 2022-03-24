@@ -11,8 +11,10 @@ import org.json.JSONObject;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 
 public class JSONHandler {
 
@@ -98,8 +100,8 @@ public class JSONHandler {
                     Lesson newLesson = new Lesson();
                     JSONObject newLessonJson = (JSONObject) newLessonsJson.get(x);
 
-                    newLesson.setLessonNum((int) newLessonJson.get("lessonNum"));
-                    newLesson.setLessonScore((int) newLessonJson.get("lessonScore"));
+                    newLesson.setLessonNum(newLessonJson.getInt("lessonNum"));
+                    newLesson.setLessonScore(newLessonJson.getInt("lessonScore"));
                     newLesson.setLessonComplete((boolean) newLessonJson.get("lessonComplete"));
                     newLanguage.addLesson(newLesson);
                 }
@@ -271,7 +273,7 @@ public class JSONHandler {
             for (int i = 0; i < lessonsJson.length(); i++){
                 Lesson lesson = new Lesson();
                 JSONObject lessonJson = (JSONObject) lessonsJson.get(i);
-                lesson.setLessonNum((int) lessonJson.get("lessonNum"));
+                lesson.setLessonNum(lessonJson.getInt("lessonNum"));
 
                 JSONArray questionsJson = (JSONArray) lessonJson.get("questions");
 
@@ -279,7 +281,7 @@ public class JSONHandler {
                     Question question = new Question();
                     JSONObject questionJson = (JSONObject) questionsJson.get(x);
 
-                    question.setQNum((int) questionJson.get("qNum"));
+                    question.setQNum(questionJson.getInt("qNum"));
                     question.setPictureFile((String) questionJson.get("pictureFile"));
                     question.setQText((String) questionJson.get("qText"));
                     question.setOptA((String) questionJson.get("optA"));
@@ -300,5 +302,33 @@ public class JSONHandler {
         }
 
         return language;
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    public ArrayList<String> loadAvailableLanguages(File file) {
+
+        ArrayList<String> languages = new ArrayList<>();
+        JSONObject langJson;
+
+        try {
+            String jsonParse = new String(Files.readAllBytes(Paths.get(String.valueOf(file))));
+
+            langJson = new JSONObject(jsonParse);
+
+            JSONArray langListJson = (JSONArray) langJson.get("languages");
+
+            for (int i = 0; i < langListJson.length(); i++){
+
+                JSONObject currentLangJson = (JSONObject) langListJson.get(i);
+                String langName = (String) currentLangJson.get("langName");
+                languages.add(langName);
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return languages;
     }
 }

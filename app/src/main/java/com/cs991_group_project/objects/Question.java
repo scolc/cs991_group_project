@@ -81,6 +81,6 @@ public class Question {
 
     @Override
     public String toString(){
-        return "Lesson " + qNum;
+        return "Question " + qNum;
     }
 }
