@@ -64,7 +64,7 @@
         android:textStyle="bold" />
 
     <ListView
-        android:id="@+id/lv_languages"
+        android:id="@+id/lv_lessons"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/bt_start"
@@ -87,7 +87,8 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:text="@string/bt_start"
-        android:onClick="onClickStart"/>
+        android:onClick="onClickStart"
+        android:enabled="false"/>
 
 
     <ImageView
