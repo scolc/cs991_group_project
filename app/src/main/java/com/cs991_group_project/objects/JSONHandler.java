@@ -117,11 +117,11 @@ public class JSONHandler {
     }
 
     /**
-     * Sets up the users file to be used for login
+     * Sets up the a file using assets
      * @param file The file to save the data in
-     * @param line The String line of user data in a JSON format
+     * @param line The String line of an asset in JSON format
      */
-    public void setupUsersFile(File file, String line) {
+    public void setupFileFromAssets(File file, String line) {
         try {
             JSONObject json = new JSONObject(line);
 
@@ -251,5 +251,54 @@ public class JSONHandler {
         }
 
         return user;
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    public Language loadLanguage(File file) {
+
+        Language language = new Language();
+        JSONObject langJson;
+
+        try{
+            String jsonParse = new String(Files.readAllBytes(Paths.get(String.valueOf(file))));
+
+            langJson = new JSONObject(jsonParse);
+
+            language.setLangName((String) langJson.get("langName"));
+            JSONArray lessonsJson = (JSONArray) langJson.get("lessons");
+
+
+            for (int i = 0; i < lessonsJson.length(); i++){
+                Lesson lesson = new Lesson();
+                JSONObject lessonJson = (JSONObject) lessonsJson.get(i);
+                lesson.setLessonNum((int) lessonJson.get("lessonNum"));
+
+                JSONArray questionsJson = (JSONArray) lessonJson.get("questions");
+
+                for (int x = 0; x < questionsJson.length(); x++) {
+                    Question question = new Question();
+                    JSONObject questionJson = (JSONObject) questionsJson.get(x);
+
+                    question.setQNum((int) questionJson.get("qNum"));
+                    question.setPictureFile((String) questionJson.get("pictureFile"));
+                    question.setQText((String) questionJson.get("qText"));
+                    question.setOptA((String) questionJson.get("optA"));
+                    question.setOptB((String) questionJson.get("optB"));
+                    question.setOptC((String) questionJson.get("optC"));
+                    question.setOptD((String) questionJson.get("optD"));
+                    question.setAnswer((String) questionJson.get("answer"));
+                    lesson.addQuestion(question);
+                }
+
+                language.addLesson(lesson);
+            }
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return language;
     }
 }

@@ -4,7 +4,6 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.graphics.Path;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -20,12 +19,9 @@ import com.cs991_group_project.user_screens.UserHome;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 
 public class Login extends AppCompatActivity {
 
@@ -112,7 +108,7 @@ public class Login extends AppCompatActivity {
             is = getAssets().open("users.json");
             BufferedReader reader = new BufferedReader(new InputStreamReader(is));
             String line = reader.readLine();
-            jh.setupUsersFile(usersFile, line);
+            jh.setupFileFromAssets(usersFile, line);
 
         } catch (IOException e) {
             e.printStackTrace();

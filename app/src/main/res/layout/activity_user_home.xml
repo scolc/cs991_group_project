@@ -72,8 +72,9 @@
         android:layout_above="@id/logo_bottom"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
+        android:onClick="onClickContinue"
         android:text="@string/bt_continue"
-        android:onClick="onClickContinue"/>
+        android:enabled="false"/>
 
 
     <ImageView

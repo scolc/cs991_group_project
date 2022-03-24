@@ -34,4 +34,9 @@ public class Language {
     public void addLesson(Lesson lesson) {
         lessons.add(lesson);
     }
+
+    @Override
+    public String toString() {
+        return langName;
+    }
 }
