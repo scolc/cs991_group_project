@@ -33,8 +33,14 @@ public class CurrentUser extends User{
         this.languages = languages;
     }
 
-    public void addLanguage(Language language) {
-        this.languages.add(language);
+    public boolean addLanguage(Language language) {
+
+        if (languages.contains(language)) {
+            return false;
+        } else {
+            this.languages.add(language);
+            return true;
+        }
     }
 
     public void setJoinDateFromDate(Calendar calendar) {

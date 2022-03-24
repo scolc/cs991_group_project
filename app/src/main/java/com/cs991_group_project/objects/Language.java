@@ -39,4 +39,11 @@ public class Language {
     public String toString() {
         return langName;
     }
+
+    @Override
+    public boolean equals(Object aLanguage) {
+
+        Language language = (Language) aLanguage;
+        return langName.equals(language.getLangName());
+    }
 }
