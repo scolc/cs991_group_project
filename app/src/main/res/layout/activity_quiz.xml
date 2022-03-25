@@ -57,7 +57,6 @@
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_below="@id/logo_top"
-        android:src="@drawable/dog"
         android:layout_marginTop="50dp"
         android:layout_marginLeft="20dp"/>
 
@@ -71,13 +70,13 @@
 
 
     <TextView
-        android:id="@+id/tv_picture_text"
+        android:id="@+id/tv_question_hint_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/logo_top"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="50dp"
+        android:layout_toRightOf="@+id/question_picture"
         android:layout_marginTop="100dp"
+        android:layout_marginLeft="50dp"
         android:text="Language Text"
         android:textStyle="bold" />
 
@@ -90,63 +89,77 @@
         android:layout_marginTop="10dp"
         android:text="@string/what_word"/>
 
-    <LinearLayout
-        android:id="@+id/options_row_1"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tv_question"
+        android:layout_toLeftOf="@id/spacer"
+        android:layout_below="@+id/tv_question"
         android:layout_marginTop="20dp"
-        android:orientation="horizontal"
         android:gravity="center">
 
         <TextView
             android:id="@+id/tv_option_a"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="30dp"
+            android:padding="3dp"
             android:text="@string/option_a"
             android:textSize="20sp"
-            android:textStyle="bold"/>
-
-        <TextView
-            android:id="@+id/tv_option_b"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:text="@string/option_b"
-            android:textSize="20sp"
-            android:textStyle="bold"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/options_row_2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/options_row_1"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal"
-        android:gravity="center">
+            android:textStyle="bold"
+            android:onClick="onClickOptionA"/>
 
         <TextView
             android:id="@+id/tv_option_c"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="30dp"
+            android:padding="3dp"
+            android:layout_below="@+id/tv_option_a"
+            android:layout_marginTop="20dp"
             android:text="@string/option_c"
             android:textSize="20sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:onClick="onClickOptionC"/>
+
+    </RelativeLayout>
+
+
+    <Space
+        android:id="@+id/spacer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/spacer"
+        android:layout_below="@+id/tv_question"
+        android:layout_marginTop="20dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_option_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:text="@string/option_b"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:onClick="onClickOptionB"/>
+
 
         <TextView
             android:id="@+id/tv_option_d"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
+            android:padding="3dp"
+            android:layout_below="@+id/tv_option_b"
+            android:layout_marginTop="20dp"
             android:text="@string/option_d"
             android:textSize="20sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:onClick="onClickOptionD"/>
 
-    </LinearLayout>
+    </RelativeLayout>
 
     <Button
         android:id="@+id/bt_submit"
@@ -156,7 +169,9 @@
         android:layout_above="@id/logo_bottom"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:text="@string/submit"/>
+        android:text="@string/submit"
+        android:enabled="false"
+        android:onClick="onClickSubmit"/>
 
 
     <ImageView
@@ -170,7 +185,5 @@
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
         android:src="@drawable/logo_strath_uni" />
-
-
 
 </RelativeLayout>

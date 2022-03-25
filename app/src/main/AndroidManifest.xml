@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Cs991_group_project">
         <activity
+            android:name=".user_screens.LessonComplete"
+            android:exported="false" />
+        <activity
             android:name=".user_screens.AddLanguage"
             android:exported="false" />
         <activity
