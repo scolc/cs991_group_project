@@ -40,4 +40,9 @@
     <string name="select_language">Select A Language To Learn</string>
     <string name="back_to_lessons">Back To Lessons</string>
     <string name="tv_lesson_complete">LESSON COMPLETE!</string>
+    <string name="tv_my_profile">My Profile</string>
+    <string name="tv_dictionary">Dictionary</string>
+    <string name="tv_set_exp">Set Experience Level</string>
+    <string name="tv_feedback">Provide Feedback</string>
+    <string name="tv_logout">Logout</string>
 </resources>

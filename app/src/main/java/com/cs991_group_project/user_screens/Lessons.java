@@ -88,17 +88,4 @@ public class Lessons extends AppCompatActivity {
         intent.putExtra("score", 0);
         startActivity(intent);
     }
-
-    public void onClickBack(View view) {
-        finish();
-    }
-
-    public void onClickHome(View view) {
-        Intent intent = new Intent(this, UserHome.class);
-        startActivity(intent);
-    }
-
-    public void onClickMenu(View view) {
-    }
-
 }

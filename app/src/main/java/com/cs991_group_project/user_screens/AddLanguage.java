@@ -131,16 +131,4 @@ public class AddLanguage extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-
-    public void onClickBack(View view) {
-        finish();
-    }
-
-    public void onClickHome(View view) {
-        Intent intent = new Intent(this, UserHome.class);
-        startActivity(intent);
-    }
-
-    public void onClickMenu(View view) {
-    }
 }
