@@ -7,35 +7,17 @@
     android:layout_height="match_parent"
     tools:context=".user_screens.UserHome">
 
-
-    <ImageView
-        android:id="@+id/logo_top"
-        android:layout_width="wrap_content"
-        android:layout_height="130dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp"
-        android:src="@drawable/logo_strath_lingo"/>
-
-    <TextView
-        android:id="@+id/top_menu"
-        android:layout_width="wrap_content"
+    <fragment
+        android:id="@+id/f_top_bar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_gravity="right"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="20dp"
-        android:gravity="right"
-        android:text="@string/top_menu"
-        android:textStyle="bold"
-        android:onClick="onClickMenu"/>
+        android:name="com.cs991_group_project.user_screens.TopBarHome"/>
 
     <TextView
         android:id="@+id/tv_languages"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/logo_top"
+        android:layout_below="@id/f_top_bar"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="10dp"
         android:text="@string/your_languages"

@@ -5,55 +5,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".user_screens.LessonComplete">
-
+    tools:context=".user_screens.Menu">
 
     <fragment
+        android:id="@+id/f_top_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/f_top_bar"
-        android:name="com.cs991_group_project.user_screens.TopBar"/>
+        android:name="com.cs991_group_project.user_screens.TopBarMenu"/>
 
     <TextView
-        android:id="@+id/tv_lesson_complete"
+        android:id="@+id/tv_my_profile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/f_top_bar"
-        android:layout_marginTop="50dp"
-        android:gravity="center"
-        android:textStyle="bold"
+        android:layout_margin="20dp"
         android:textSize="20sp"
-        android:text="@string/tv_lesson_complete"/>
+        android:text="@string/tv_my_profile"/>
 
     <TextView
-        android:id="@+id/tv_lesson_score"
+        android:id="@+id/tv_dictionary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tv_lesson_complete"
-        android:layout_marginTop="50dp"
-        android:gravity="center"
-        android:textSize="20sp"/>
+        android:layout_below="@id/tv_my_profile"
+        android:layout_margin="20dp"
+        android:textSize="20sp"
+        android:text="@string/tv_dictionary"/>
 
     <TextView
-        android:id="@+id/tv_score_update"
+        android:id="@+id/tv_set_exp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tv_lesson_score"
-        android:layout_marginTop="50dp"
-        android:gravity="center"
-        android:textSize="15sp"/>
+        android:layout_below="@id/tv_dictionary"
+        android:layout_margin="20dp"
+        android:textSize="20sp"
+        android:text="@string/tv_set_exp"/>
 
-    <Button
-        android:id="@+id/bt_back_to_lessons"
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/tv_feedback"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_above="@id/logo_bottom"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:text="@string/back_to_lessons"
-        android:onClick="onClickBackToLessons"/>
+        android:layout_below="@id/tv_set_exp"
+        android:layout_margin="20dp"
+        android:textSize="20sp"
+        android:text="@string/tv_feedback"/>
 
+    <TextView
+        android:id="@+id/tv_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_feedback"
+        android:layout_margin="20dp"
+        android:textSize="20sp"
+        android:text="@string/tv_logout"
+        android:onClick="onClickLogout"/>
 
     <ImageView
         android:id="@+id/logo_bottom"

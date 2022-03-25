@@ -73,8 +73,6 @@ public class LessonComplete extends AppCompatActivity {
 
         tvScoreUpdate.setText(update);
         jh.saveUserDataFile(userDataFile, thisUser);
-
-
     }
 
     public void onClickBackToLessons(View view) {
@@ -83,17 +81,4 @@ public class LessonComplete extends AppCompatActivity {
         intent.putExtra("index", languageIndex);
         startActivity(intent);
     }
-
-    public void onClickBack(View view) {
-        finish();
-    }
-
-    public void onClickHome(View view) {
-        Intent intent = new Intent(this, UserHome.class);
-        startActivity(intent);
-    }
-
-    public void onClickMenu(View view) {
-    }
-
 }

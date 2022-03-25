@@ -74,9 +74,6 @@ public class UserHome extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void onClickMenu(View view) {
-    }
-
     public void onClickAddLanguage(View view) {
         Intent intent = new Intent(this, AddLanguage.class);
         startActivity(intent);
