@@ -59,7 +59,7 @@ public class Lessons extends AppCompatActivity {
             String lessonString = language.getLangName() + " " + lesson.toString();
             Lesson userLessonData = thisUser.getLanguages().get(languageIndex).getLessons().get(language.getLessons().indexOf(lesson));
             if (userLessonData.isLessonComplete()) {
-                lessonString += "Score: " + userLessonData.getLessonScore();
+                lessonString += "\t\t\tScore: " + userLessonData.getLessonScore() + "/" + lesson.getQuestions().size();
             }
             lessonList.add(lessonString);
         }
