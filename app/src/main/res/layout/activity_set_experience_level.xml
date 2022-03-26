@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".user_screens.SetExperienceLevel">
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/f_top_bar"
+        android:name="com.cs991_group_project.user_screens.TopBar"/>
+
+    <ImageView
+        android:id="@+id/logo_bottom"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/logo_strath_uni" />
+
+    <TextView
+        android:id="@+id/tv_setExperienceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/set_experience"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/f_top_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+
+    <Spinner
+        android:id="@+id/sp_languageSelect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/tv_setExperienceText"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:padding="5dp"
+        android:background="@drawable/bg_spinner"/>
+    
+    <RadioGroup
+        android:id="@+id/rg_experienceSelect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sp_languageSelect"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+        <RadioButton
+            android:id="@+id/firstoption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Beginner"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/secondoption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Intermediate"/>
+
+        <RadioButton
+            android:id="@+id/thirdoption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Fluent"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/bt_submit"
+        android:layout_above="@+id/logo_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClickSubmit"
+        android:text="@string/submit" />
+
+</RelativeLayout>

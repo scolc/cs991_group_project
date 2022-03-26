@@ -37,6 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_dictionary"
         android:layout_margin="20dp"
+        android:onClick="onClickSetExp"
         android:textSize="20sp"
         android:text="@string/tv_set_exp"/>
 

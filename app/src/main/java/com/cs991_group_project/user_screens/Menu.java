@@ -21,4 +21,9 @@ public class Menu extends AppCompatActivity {
         Intent intent = new Intent(this, Login.class);
         startActivity(intent);
     }
+
+    public void onClickSetExp(View view) {
+        Intent intent = new Intent(this, SetExperienceLevel.class);
+        startActivity(intent);
+    }
 }
