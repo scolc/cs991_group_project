@@ -45,4 +45,8 @@
     <string name="tv_set_exp">Set Experience Level</string>
     <string name="tv_feedback">Provide Feedback</string>
     <string name="tv_logout">Logout</string>
+    <string name="set_experience">Please set your experience level:</string>
+    <string name="Beginner">Beginner</string>
+    <string name="Intermediate">Intermediate</string>
+    <string name="Fluent">Fluent</string>
 </resources>
