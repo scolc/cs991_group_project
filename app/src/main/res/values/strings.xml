@@ -59,4 +59,6 @@
     <string name="bt_upload">/..</string>
     <string name="bt_cancel">CANCEL</string>
     <string name="tv_language">"Language: "</string>
+    <string name="tv_new_lesson_file">New Lesson Zip File</string>
+    <string name="bt_delete">DELETE</string>
 </resources>

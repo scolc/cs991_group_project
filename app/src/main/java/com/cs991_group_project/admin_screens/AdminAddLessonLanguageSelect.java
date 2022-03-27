@@ -13,11 +13,7 @@ import android.widget.Button;
 import android.widget.ListView;
 
 import com.cs991_group_project.R;
-import com.cs991_group_project.objects.CurrentUser;
 import com.cs991_group_project.objects.JSONHandler;
-import com.cs991_group_project.objects.User;
-import com.cs991_group_project.user_screens.AddLanguage;
-import com.cs991_group_project.user_screens.Lessons;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -25,9 +21,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Calendar;
 
-public class AdminAddLanguage extends AppCompatActivity {
+public class AdminAddLessonLanguageSelect extends AppCompatActivity {
 
     private File availableLanguagesFile;
     private JSONHandler jh;
@@ -38,7 +33,7 @@ public class AdminAddLanguage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_admin_add_lesson_language);
+        setContentView(R.layout.activity_admin_add_lesson_language_select);
 
         jh = new JSONHandler();
         availableLanguagesFile = new File(getFilesDir(), "languages.json");
