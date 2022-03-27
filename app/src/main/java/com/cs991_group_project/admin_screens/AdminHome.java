@@ -17,7 +17,12 @@ public class AdminHome extends AppCompatActivity {
     }
 
     public void onClickAddLesson(View view) {
-        Intent  intent = new Intent(this, AdminAddLanguage.class);
+        Intent  intent = new Intent(this, AdminAddLessonLanguageSelect.class);
+        startActivity(intent);
+    }
+
+    public void onClickEdit(View view) {
+        Intent intent = new Intent(this, AdminEditLanguage.class);
         startActivity(intent);
     }
 }

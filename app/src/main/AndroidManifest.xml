@@ -10,13 +10,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Cs991_group_project">
         <activity
+            android:name=".admin_screens.AdminEditChosenLesson"
+            android:exported="false" />
+        <activity
+            android:name=".admin_screens.AdminEditLesson"
+            android:exported="false" />
+        <activity
+            android:name=".admin_screens.AdminEditLanguage"
+            android:exported="false" />
+        <activity
             android:name=".admin_screens.AdminCreateLesson"
             android:exported="false" />
         <activity
             android:name=".admin_screens.AdminCreateLanguage"
             android:exported="false" />
         <activity
-            android:name=".admin_screens.AdminAddLanguage"
+            android:name=".admin_screens.AdminAddLessonLanguageSelect"
             android:exported="false" />
         <activity
             android:name=".user_screens.SetExperienceLevel"

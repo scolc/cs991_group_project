@@ -28,7 +28,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/bt_add_lesson"
         android:layout_margin="40dp"
-        android:text="@string/bt_edit_lesson" />
+        android:text="@string/bt_edit_lesson"
+        android:onClick="onClickEdit"/>
 
     <ImageView
         android:id="@+id/logo_bottom"

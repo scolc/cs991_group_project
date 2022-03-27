@@ -21,11 +21,11 @@ public class AdminCreateLesson extends AppCompatActivity {
         name = getIntent().getStringExtra("name");
 
         TextView tvLanguage = findViewById(R.id.tv_language);
-        tvLanguage.setText("Lesson: " + name);
+        tvLanguage.setText("Language: " + name);
     }
 
     public void onClickCancel(View view) {
-        Intent intent = new Intent(this, AdminAddLanguage.class);
+        Intent intent = new Intent(this, AdminAddLessonLanguageSelect.class);
         startActivity(intent);
     }
 
