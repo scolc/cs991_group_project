@@ -49,4 +49,14 @@
     <string name="Beginner">Beginner</string>
     <string name="Intermediate">Intermediate</string>
     <string name="Fluent">Fluent</string>
+    <string name="bt_add_lesson">Add New Lesson</string>
+    <string name="bt_edit_lesson">Edit Existing Lesson</string>
+    <string name="available_languages">Current Available Languages</string>
+    <string name="add_new_language">Add New Language</string>
+    <string name="add_language_name">Enter A Language Name</string>
+    <string name="language_exists">Language Already Exists</string>
+    <string name="tv_add_lesson_file">Add Lesson Zip File</string>
+    <string name="bt_upload">/..</string>
+    <string name="bt_cancel">CANCEL</string>
+    <string name="tv_language">"Language: "</string>
 </resources>

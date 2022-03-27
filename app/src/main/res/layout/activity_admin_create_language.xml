@@ -5,30 +5,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".admin_screens.AdminHome">
+    tools:context=".admin_screens.AdminCreateLanguage">
 
     <fragment
         android:id="@+id/f_top_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:name="com.cs991_group_project.admin_screens.AdminTopBarHome"/>
+        android:name="com.cs991_group_project.admin_screens.AdminTopBar"/>
 
-    <Button
-        android:id="@+id/bt_add_lesson"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/tv_add_language_name"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/f_top_bar"
-        android:layout_margin="40dp"
-        android:text="@string/bt_add_lesson"
-        android:onClick="onClickAddLesson" />
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/add_language_name"
+        android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/bt_edit_lesson"
+    <EditText
+        android:id="@+id/et_add_language_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/bt_add_lesson"
-        android:layout_margin="40dp"
-        android:text="@string/bt_edit_lesson" />
+        android:layout_below="@id/tv_add_language_name"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="20dp"
+        android:padding="5dp"
+        android:background="@drawable/bg_borderbox"/>
+
+    <Button
+        android:id="@+id/bt_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/logo_bottom"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:onClick="onClickSubmit"
+        android:text="@string/submit" />
 
     <ImageView
         android:id="@+id/logo_bottom"
