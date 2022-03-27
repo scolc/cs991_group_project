@@ -9,6 +9,9 @@
         <entry key="..\:/Documents/Android Studio Projects/cs991_group_project/app/src/main/res/drawable/ic_login_email.xml" value="0.265" />
         <entry key="..\:/Documents/Android Studio Projects/cs991_group_project/app/src/main/res/layout/activity_Login_Screen.xml" value="0.371875" />
         <entry key="..\:/Documents/Android Studio Projects/cs991_group_project/app/src/main/res/layout/activity_add_language.xml" value="0.1" />
+        <entry key="..\:/Documents/Android Studio Projects/cs991_group_project/app/src/main/res/layout/activity_admin_add_lesson_language.xml" value="0.3578125" />
+        <entry key="..\:/Documents/Android Studio Projects/cs991_group_project/app/src/main/res/layout/activity_admin_create_language.xml" value="0.3578125" />
+        <entry key="..\:/Documents/Android Studio Projects/cs991_group_project/app/src/main/res/layout/activity_admin_create_lesson.xml" value="0.36615384615384616" />
         <entry key="..\:/Documents/Android Studio Projects/cs991_group_project/app/src/main/res/layout/activity_admin_home.xml" value="0.371875" />
         <entry key="..\:/Documents/Android Studio Projects/cs991_group_project/app/src/main/res/layout/activity_forgot_password.xml" value="0.371875" />
         <entry key="..\:/Documents/Android Studio Projects/cs991_group_project/app/src/main/res/layout/activity_forgot_password_linksent.xml" value="0.371875" />
@@ -21,6 +24,8 @@
         <entry key="..\:/Documents/Android Studio Projects/cs991_group_project/app/src/main/res/layout/activity_register_user.xml" value="0.3578125" />
         <entry key="..\:/Documents/Android Studio Projects/cs991_group_project/app/src/main/res/layout/activity_test_fragment.xml" value="0.371875" />
         <entry key="..\:/Documents/Android Studio Projects/cs991_group_project/app/src/main/res/layout/activity_user_home.xml" value="0.22375690607734808" />
+        <entry key="..\:/Documents/Android Studio Projects/cs991_group_project/app/src/main/res/layout/fragment_admin_top_bar.xml" value="0.371875" />
+        <entry key="..\:/Documents/Android Studio Projects/cs991_group_project/app/src/main/res/layout/fragment_admin_top_bar_home.xml" value="0.371875" />
         <entry key="..\:/Documents/Android Studio Projects/cs991_group_project/app/src/main/res/layout/fragment_top_bar.xml" value="0.23480662983425415" />
         <entry key="..\:/Documents/Android Studio Projects/cs991_group_project/app/src/main/res/layout/fragment_top_bar_menu.xml" value="0.3578125" />
         <entry key="..\:/Documents/Android Studio Projects/cs991_group_project/app/src/main/res/layout/fragment_top_bar_user_home.xml" value="0.371875" />
