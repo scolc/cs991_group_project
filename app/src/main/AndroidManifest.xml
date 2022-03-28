@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Cs991_group_project">
         <activity
-            android:name=".user_screens.ProvideFeedback"
+            android:name=".user_screens.MyProfile"
             android:exported="false" />
         <activity
             android:name=".admin_screens.AdminEditChosenLesson"
