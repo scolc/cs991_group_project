@@ -32,7 +32,8 @@
         android:layout_alignParentLeft="true"
         android:layout_margin="20dp"
         android:padding="5dp"
-        android:background="@drawable/bg_borderbox"/>
+        android:background="@drawable/bg_borderbox"
+        android:inputType="text"/>
 
     <Button
         android:id="@+id/bt_submit"
