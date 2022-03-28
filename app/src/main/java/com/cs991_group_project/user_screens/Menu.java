@@ -27,8 +27,8 @@ public class Menu extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void onClickMyProfile(View view) {
-        Intent intent = new Intent(this, MyProfile.class);
+    public void onClickProFeedback(View view) {
+        Intent intent = new Intent(this, ProvideFeedback.class);
         startActivity(intent);
     }
 }
