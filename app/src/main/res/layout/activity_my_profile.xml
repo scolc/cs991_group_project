@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".user_screens.MyProfile">
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/f_top_bar"
+        android:name="com.cs991_group_project.user_screens.TopBar"/>
+
+    <ImageView
+        android:id="@+id/logo_bottom"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/logo_strath_uni" />
+
+    <TextView
+        android:id="@+id/tv_my_profile_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/f_top_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/tv_my_profile"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_first_name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name: "
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:textSize="18dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/tv_my_profile_text"/>
+
+    <TextView
+        android:id="@+id/tv_input_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:textSize="18dp"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_my_profile_text"/>
+
+    <TextView
+        android:id="@+id/tv_email_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email: "
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:textSize="18dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/tv_first_name_text"/>
+
+    <TextView
+        android:id="@+id/tv_input_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:textSize="18dp"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_first_name_text"/>
+
+    <TextView
+        android:id="@+id/tv_startdate_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date joined: "
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:textSize="18dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/tv_email_text"/>
+
+    <TextView
+        android:id="@+id/tv_input_datejoined"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:textSize="18dp"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_email_text"/>
+
+    <TextView
+        android:id="@+id/lesson_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:textSize="20dp"
+        android:textColor="@android:color/black"
+        android:layout_centerHorizontal="true"
+        android:text="@string/lesson_progress"
+        android:textStyle="bold"
+        android:layout_below="@id/tv_input_datejoined"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:layout_below="@id/lesson_progress"
+        android:layout_above="@id/logo_bottom"
+        android:background="@color/grey">
+
+
+        <TableLayout
+            android:id="@+id/tl_lessons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableRow>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:text="Language"
+                    android:textColor="@color/black"
+                    android:gravity="center_horizontal"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:text="Lessons completed"
+                    android:textColor="@color/black"
+                    android:gravity="center_horizontal"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:textColor="@color/black"
+                    android:text="Score"
+                    android:gravity="center_horizontal"/>
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+</RelativeLayout>

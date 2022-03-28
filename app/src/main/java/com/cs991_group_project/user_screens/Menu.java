@@ -26,4 +26,9 @@ public class Menu extends AppCompatActivity {
         Intent intent = new Intent(this, SetExperienceLevel.class);
         startActivity(intent);
     }
+
+    public void onClickMyProfile(View view) {
+        Intent intent = new Intent(this, MyProfile.class);
+        startActivity(intent);
+    }
 }
