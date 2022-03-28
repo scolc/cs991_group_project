@@ -30,6 +30,8 @@ public class Menu extends AppCompatActivity {
 
     public void onClickDict(View view) {
         Intent intent = new Intent(this, Dictionary.class);
+        startActivity(intent);
+    }
 
     public void onClickMyProfile(View view) {
         Intent intent = new Intent(this, MyProfile.class);
