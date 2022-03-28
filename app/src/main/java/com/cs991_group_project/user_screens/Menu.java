@@ -26,4 +26,9 @@ public class Menu extends AppCompatActivity {
         Intent intent = new Intent(this, SetExperienceLevel.class);
         startActivity(intent);
     }
+
+    public void onClickDict(View view) {
+        Intent intent = new Intent(this, Dictionary.class);
+        startActivity(intent);
+    }
 }

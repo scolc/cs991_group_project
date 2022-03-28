@@ -8,36 +8,23 @@
         <entry key="..\:/Documents/Android Studio Projects/cs991_group_project/app/src/main/res/drawable/ic_arrow_down.xml" value="0.122" />
         <entry key="..\:/Documents/Android Studio Projects/cs991_group_project/app/src/main/res/drawable/ic_login_email.xml" value="0.265" />
         <entry key="..\:/Documents/Android Studio Projects/cs991_group_project/app/src/main/res/layout/activity_Login_Screen.xml" value="0.371875" />
-        <entry key="..\:/Documents/Android Studio Projects/cs991_group_project/app/src/main/res/layout/activity_add_language.xml" value="0.1" />
-        <entry key="..\:/Documents/Android Studio Projects/cs991_group_project/app/src/main/res/layout/activity_admin_add_lesson_language.xml" value="0.3578125" />
-        <entry key="..\:/Documents/Android Studio Projects/cs991_group_project/app/src/main/res/layout/activity_admin_create_language.xml" value="0.3578125" />
-        <entry key="..\:/Documents/Android Studio Projects/cs991_group_project/app/src/main/res/layout/activity_admin_create_lesson.xml" value="0.36615384615384616" />
-        <entry key="..\:/Documents/Android Studio Projects/cs991_group_project/app/src/main/res/layout/activity_admin_edit_chosen_lesson.xml" value="0.3578125" />
-        <entry key="..\:/Documents/Android Studio Projects/cs991_group_project/app/src/main/res/layout/activity_admin_edit_language.xml" value="0.371875" />
-        <entry key="..\:/Documents/Android Studio Projects/cs991_group_project/app/src/main/res/layout/activity_admin_edit_lesson.xml" value="0.371875" />
         <entry key="..\:/Documents/Android Studio Projects/cs991_group_project/app/src/main/res/layout/activity_admin_home.xml" value="0.371875" />
-        <entry key="..\:/Documents/Android Studio Projects/cs991_group_project/app/src/main/res/layout/activity_forgot_password.xml" value="0.371875" />
-        <entry key="..\:/Documents/Android Studio Projects/cs991_group_project/app/src/main/res/layout/activity_forgot_password_linksent.xml" value="0.371875" />
-        <entry key="..\:/Documents/Android Studio Projects/cs991_group_project/app/src/main/res/layout/activity_lesson_complete.xml" value="0.25462962962962965" />
-        <entry key="..\:/Documents/Android Studio Projects/cs991_group_project/app/src/main/res/layout/activity_lessons.xml" value="0.23823529411764705" />
+        <entry key="..\:/Documents/Android Studio Projects/cs991_group_project/app/src/main/res/layout/activity_lessons.xml" value="0.1" />
         <entry key="..\:/Documents/Android Studio Projects/cs991_group_project/app/src/main/res/layout/activity_login.xml" value="0.371875" />
         <entry key="..\:/Documents/Android Studio Projects/cs991_group_project/app/src/main/res/layout/activity_main.xml" value="0.371875" />
-        <entry key="..\:/Documents/Android Studio Projects/cs991_group_project/app/src/main/res/layout/activity_menu.xml" value="0.33" />
-        <entry key="..\:/Documents/Android Studio Projects/cs991_group_project/app/src/main/res/layout/activity_quiz.xml" value="0.25" />
+        <entry key="..\:/Documents/Android Studio Projects/cs991_group_project/app/src/main/res/layout/activity_quiz.xml" value="0.371875" />
         <entry key="..\:/Documents/Android Studio Projects/cs991_group_project/app/src/main/res/layout/activity_register_user.xml" value="0.3578125" />
-        <entry key="..\:/Documents/Android Studio Projects/cs991_group_project/app/src/main/res/layout/activity_test_fragment.xml" value="0.371875" />
-        <entry key="..\:/Documents/Android Studio Projects/cs991_group_project/app/src/main/res/layout/activity_user_home.xml" value="0.22375690607734808" />
-        <entry key="..\:/Documents/Android Studio Projects/cs991_group_project/app/src/main/res/layout/fragment_admin_top_bar.xml" value="0.371875" />
-        <entry key="..\:/Documents/Android Studio Projects/cs991_group_project/app/src/main/res/layout/fragment_admin_top_bar_home.xml" value="0.371875" />
-        <entry key="..\:/Documents/Android Studio Projects/cs991_group_project/app/src/main/res/layout/fragment_top_bar.xml" value="0.23480662983425415" />
-        <entry key="..\:/Documents/Android Studio Projects/cs991_group_project/app/src/main/res/layout/fragment_top_bar_menu.xml" value="0.3578125" />
-        <entry key="..\:/Documents/Android Studio Projects/cs991_group_project/app/src/main/res/layout/fragment_top_bar_user_home.xml" value="0.371875" />
-        <entry key="app/src/main/res/drawable/bg_spinner.xml" value="0.2185" />
-        <entry key="app/src/main/res/layout/activity_lessons.xml" value="0.376274328081557" />
-        <entry key="app/src/main/res/layout/activity_menu.xml" value="0.335" />
-        <entry key="app/src/main/res/layout/activity_register_user.xml" value="0.2453125" />
-        <entry key="app/src/main/res/layout/activity_set_experience_level.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_top_bar.xml" value="0.45" />
+        <entry key="..\:/Documents/Android Studio Projects/cs991_group_project/app/src/main/res/layout/activity_user_home.xml" value="0.371875" />
+        <entry key="..\:/Users/Ari/AndroidStudioProjects/cs991_group_project/app/src/main/res/layout/activity_add_language.xml" value="0.3875" />
+        <entry key="..\:/Users/Ari/AndroidStudioProjects/cs991_group_project/app/src/main/res/layout/activity_dictionary.xml" value="0.25" />
+        <entry key="..\:/Users/Ari/AndroidStudioProjects/cs991_group_project/app/src/main/res/layout/activity_forgot_password.xml" value="0.3875" />
+        <entry key="..\:/Users/Ari/AndroidStudioProjects/cs991_group_project/app/src/main/res/layout/activity_forgot_password_linksent.xml" value="0.3875" />
+        <entry key="..\:/Users/Ari/AndroidStudioProjects/cs991_group_project/app/src/main/res/layout/activity_lessons.xml" value="0.3875" />
+        <entry key="..\:/Users/Ari/AndroidStudioProjects/cs991_group_project/app/src/main/res/layout/activity_main.xml" value="0.3875" />
+        <entry key="..\:/Users/Ari/AndroidStudioProjects/cs991_group_project/app/src/main/res/layout/activity_menu.xml" value="0.3875" />
+        <entry key="..\:/Users/Ari/AndroidStudioProjects/cs991_group_project/app/src/main/res/layout/activity_register_user.xml" value="0.3875" />
+        <entry key="..\:/Users/Ari/AndroidStudioProjects/cs991_group_project/app/src/main/res/layout/activity_search.xml" value="0.3875" />
+        <entry key="..\:/Users/Ari/AndroidStudioProjects/cs991_group_project/app/src/main/res/layout/activity_user_home.xml" value="0.3875" />
       </map>
     </option>
   </component>

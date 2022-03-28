@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".user_screens.Dictionary">
+
+
+    <TextView
+        android:id="@+id/dictionary_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/f_top_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/dic_title"
+        android:textAlignment="center"
+        android:textSize="34sp" />
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/f_top_bar"
+        android:name="com.cs991_group_project.user_screens.TopBar"/>
+
+    <TextView
+        android:id="@+id/choose_source_lang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dictionary_title"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/dic_choose_lang"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/choose_target_lang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/choose_source_lang"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/dic_choose_target_lang"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/navbuttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/logo_bottom"
+        android:layout_marginBottom="1dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/bt_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:onClick="onClickBack"
+            android:text="@string/back" />
+
+        <Button
+            android:id="@+id/bt_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:onClick="onClickTransl"
+            android:text="@string/dic_search_button" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/logo_bottom"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/logo_strath_uni"
+        android:layout_margin="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"/>
+
+    <Spinner
+        android:id="@+id/src_lang_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dictionary_title"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="12dp"
+        android:layout_toRightOf="@id/choose_source_lang"
+        android:background="@drawable/bg_spinner"
+        android:entries="@array/languages"
+        android:padding="3dp" />
+
+    <Spinner
+        android:id="@+id/target_lang_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/choose_source_lang"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/choose_source_lang"
+        android:background="@drawable/bg_spinner"
+        android:entries="@array/languages"
+        android:padding="3dp" />
+
+    <EditText
+        android:id="@+id/dic_wordToSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/choose_target_lang"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/bg_borderbox"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:text="@string/dic_search_hint" />
+
+    <TextView
+        android:id="@+id/dic_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/navbuttons"
+        android:layout_below="@id/dic_wordToSearch"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:padding="10dp"
+        android:text=""
+        android:textSize="16sp" />
+
+
+</RelativeLayout>

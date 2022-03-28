@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Cs991_group_project">
+
         <activity
             android:name=".admin_screens.AdminEditChosenLesson"
             android:exported="false" />
@@ -44,6 +45,9 @@
             android:exported="false" />
         <activity
             android:name=".user_screens.Lessons"
+            android:exported="false" />
+        <activity
+            android:name=".user_screens.Dictionary"
             android:exported="false" />
         <activity
             android:name=".login_screens.ForgotPassword"
