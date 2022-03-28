@@ -304,6 +304,56 @@ public class JSONHandler {
         return language;
     }
 
+    public void saveLanguageFile(File file, Language language) {
+
+        JSONObject langJson = new JSONObject();
+
+        try {
+            langJson.put("langName", language.getLangName());
+
+            JSONArray lessonsJson = new JSONArray();
+
+            for (Lesson lesson : language.getLessons()) {
+                JSONObject lessonJSON = new JSONObject();
+                lessonJSON.put("lessonNum", lesson.getLessonNum());
+
+                JSONArray questionsJson = new JSONArray();
+
+                for (Question question : lesson.getQuestions()) {
+                    JSONObject questionJson = new JSONObject();
+
+                    questionJson.put("qNum", question.getQNum());
+                    questionJson.put("pictureFile", question.getPictureFile());
+                    questionJson.put("qText", question.getQText());
+                    questionJson.put("optA", question.getOptA());
+                    questionJson.put("optB", question.getOptB());
+                    questionJson.put("optC", question.getOptC());
+                    questionJson.put("optD", question.getOptD());
+                    questionJson.put("answer", question.getAnswer());
+
+                    questionsJson.put(questionJson);
+                }
+
+                lessonJSON.put("questions", questionsJson);
+
+                lessonsJson.put(lessonJSON);
+            }
+
+            langJson.put("lessons", lessonsJson);
+
+            FileWriter fw = new FileWriter(file);
+            fw.write(langJson.toString());
+            fw.flush();
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+    }
+
     @RequiresApi(api = Build.VERSION_CODES.O)
     public ArrayList<String> loadAvailableLanguages(File file) {
 
@@ -330,5 +380,33 @@ public class JSONHandler {
         }
 
         return languages;
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    public  void saveAvailableLanguages(File file, ArrayList<String> strings) {
+
+        JSONObject langJson = new JSONObject();
+        JSONArray langNamesJson = new JSONArray();
+
+        try {
+
+            for (String string : strings) {
+                JSONObject langStringJson = new JSONObject();
+                langStringJson.put("langName", string);
+                langNamesJson.put(langStringJson);
+            }
+
+            langJson.put("languages", langNamesJson);
+
+            FileWriter fw = new FileWriter(file);
+            fw.write(langJson.toString());
+            fw.flush();
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 }

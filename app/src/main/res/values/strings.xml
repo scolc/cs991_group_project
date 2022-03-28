@@ -71,5 +71,8 @@
         <item>English</item>
     </string-array>
     <string name="dic_search_button">SEARCH</string>
-
+    <string name="lesson_progress">Progress</string>
+    <string name="top_logout">LOGOUT</string>
+    <string name="feed_back">Please Rate The App And Provide Feedback</string>
+    <string name="feedback">Feedback (Optional)</string>
 </resources>
