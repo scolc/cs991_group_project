@@ -19,6 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/f_top_bar"
         android:layout_margin="20dp"
+        android:onClick="onClickMyProfile"
         android:textSize="20sp"
         android:text="@string/tv_my_profile"/>
 
