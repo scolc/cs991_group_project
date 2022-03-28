@@ -36,7 +36,8 @@
         android:layout_below="@id/tv_language"
         android:layout_toRightOf="@id/tv_upload_lesson"
         android:layout_margin="10dp"
-        android:text="@string/bt_upload"/>
+        android:text="@string/bt_upload"
+        android:onClick="onClickUpload"/>
 
     <LinearLayout
         android:layout_width="match_parent"

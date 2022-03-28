@@ -76,6 +76,7 @@ public class AdminAddLessonLanguageSelect extends AppCompatActivity {
     public void onClickContinue(View view) {
         Intent intent = new Intent(this, AdminCreateLesson.class);
         intent.putExtra("name", languages.get(index));
+        intent.putExtra("isNew", false);
         startActivity(intent);
     }
 
