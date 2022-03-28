@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.cs991_group_project.R;
+import com.cs991_group_project.login_screens.Login;
 import com.cs991_group_project.user_screens.Menu;
 import com.cs991_group_project.user_screens.UserHome;
 
@@ -43,6 +44,15 @@ public class AdminTopBar extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), AdminHome.class);
+                startActivity(intent);
+            }
+        });
+
+        TextView logout = view.findViewById(R.id.top_logout);
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), Login.class);
                 startActivity(intent);
             }
         });
