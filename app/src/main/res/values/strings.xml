@@ -62,4 +62,6 @@
     <string name="tv_new_lesson_file">New Lesson Zip File</string>
     <string name="bt_delete">DELETE</string>
     <string name="top_logout">LOGOUT</string>
+    <string name="feedback">Feedback (Optional)</string>
+    <string name="feed_back">Please Rate The App and Provide Feedback</string>
 </resources>
