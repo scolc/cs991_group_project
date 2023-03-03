@@ -7,7 +7,7 @@ Group repo for the prototype used in a course project.
 Steven Colclough - Main contributer.<br>
 Lewis Doig - Set Experience Level and profile screens.<br>
 Ewurama Frimpong - Feeback screens.<br>
-Ari BD Veroli - Forgot Password screens.<br>
+Ari BD Veroli - Forgot Password and dictionary screens.<br>
 
 ## The Application
 
